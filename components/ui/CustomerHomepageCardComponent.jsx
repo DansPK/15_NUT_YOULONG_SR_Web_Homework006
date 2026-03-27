@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {Users} from "lucide-react";
 
-export default function CustomerHomepageCardComponent() {
+export default function CustomerHomepageCardComponent({ count }) {
   return (
     <div className="group relative w-full max-w-md h-[700px] bg-gradient-to-br from-amber-50 to-white rounded-[2.5rem] p-8 flex flex-col justify-between overflow-hidden border border-amber-100 shadow-[0_20px_50px_rgba(245,158,11,0.05)] transition-all duration-500 hover:shadow-[0_40px_80px_rgba(245,158,11,0.1)] hover:-translate-y-2">
       <div className="absolute -top-20 -right-20 w-64 h-64 bg-amber-200/30 rounded-full blur-3xl group-hover:bg-amber-300/40 transition-colors duration-700" />
@@ -39,7 +39,7 @@ export default function CustomerHomepageCardComponent() {
           <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">
             Total Users
           </span>
-          <span className="text-2xl font-black text-slate-800">{""}</span>
+          <span className="text-2xl font-black text-slate-800">{count}</span>
         </div>
         <Link href="/customers">
           <Button className="group/btn bg-amber-300 hover:bg-amber-500 text-white h-14 px-8 rounded-2xl font-bold shadow-lg shadow-amber-200 transition-all active:scale-95 flex gap-2">

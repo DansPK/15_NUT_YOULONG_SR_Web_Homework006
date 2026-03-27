@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowUpRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { PRODUCT_FALLBACK_IMAGE } from "@/lib/utils";
 
 function ProductCardComponent({props}) {
     return (
@@ -22,7 +23,7 @@ function ProductCardComponent({props}) {
 
 
                 <Image
-                    src={props.imageUrl ?? "https://www.kindpng.com/picc/m/285-2856629_placeholder-highlights-for-instagram-camra-hd-png-download.png"}
+                    src={props.imageUrl ?? PRODUCT_FALLBACK_IMAGE}
                     alt={props.name}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
