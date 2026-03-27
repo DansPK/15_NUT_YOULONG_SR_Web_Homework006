@@ -1,4 +1,9 @@
 "use client";
+import {Button} from "@/components/ui/button";
+import {ArrowRight, Zap} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+
 export default function ProductHomepageCardComponent() {
   return (
     <div className="group relative w-full max-w-md h-[700px] bg-gradient-to-br from-pink-50 to-white rounded-[2rem] p-8 flex flex-col justify-between overflow-hidden border border-pink-100 shadow-[0_20px_50px_rgba(236,72,153,0.05)] transition-all duration-500 hover:shadow-[0_40px_80px_rgba(236,72,153,0.1)] hover:-translate-y-2">
@@ -19,11 +24,14 @@ export default function ProductHomepageCardComponent() {
       </div>
       <div className="relative z-10 flex items-center justify-center py-4 transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-3">
         <Image
-          src={""}
-          alt="Macbook Pro M5"
-          className="w-full h-auto drop-shadow-[0_35px_35px_rgba(236,72,153,0.3)]"
-          priority
+            src="https://www.apple.com/v/macbook-air/z/images/overview/hero/hero_static__c9sislzzicq6_large.png"
+            alt="Macbook Pro M5"
+            width={1000}
+            height={600}
+            className="w-full h-auto drop-shadow-[0_35px_35px_rgba(236,72,153,0.3)]"
+            priority
         />
+
       </div>
       <div className="relative z-10 w-full flex items-center justify-between">
         <div className="flex flex-col">
@@ -33,7 +41,7 @@ export default function ProductHomepageCardComponent() {
           <span className="text-2xl font-black text-slate-800">$1,999</span>
         </div>
 
-        <Link>
+        <Link href="/products">
           <Button className="group/btn bg-pink-400 hover:bg-pink-600 text-white h-14 px-8 rounded-2xl font-bold shadow-lg shadow-pink-200 transition-all active:scale-95 flex gap-2">
             View Details
             <ArrowRight className="size-4 transition-transform group-hover/btn:translate-x-1" />

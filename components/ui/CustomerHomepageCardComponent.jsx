@@ -1,4 +1,9 @@
 "use client";
+import {Button} from "@/components/ui/button";
+import {ArrowRight} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import {Users} from "lucide-react";
 
 export default function CustomerHomepageCardComponent() {
   return (
@@ -9,6 +14,7 @@ export default function CustomerHomepageCardComponent() {
           <span className="bg-amber-500/10 text-amber-600 text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded-full">
             Management
           </span>
+
           <Users className="size-3 text-amber-500" />
         </div>
         <h2 className="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mt-2 italic">
@@ -20,8 +26,10 @@ export default function CustomerHomepageCardComponent() {
       </div>
       <div className="relative z-10 flex items-center justify-center py-4 transition-transform duration-700 group-hover:scale-110">
         <Image
-          src={image}
+          src="https://imgproxy.attic.sh/insecure/f:webp/q:90/w:1920/plain/https://attic.sh/60oajh5s1ykht7n259hq5ad5o3b0"
           alt="customer illustration"
+          width={1000}
+          height={600}
           className="w-full h-auto drop-shadow-[0_35px_35px_rgba(245,158,11,0.3)] object-contain"
           priority
         />
@@ -33,7 +41,7 @@ export default function CustomerHomepageCardComponent() {
           </span>
           <span className="text-2xl font-black text-slate-800">{""}</span>
         </div>
-        <Link>
+        <Link href="/customers">
           <Button className="group/btn bg-amber-300 hover:bg-amber-500 text-white h-14 px-8 rounded-2xl font-bold shadow-lg shadow-amber-200 transition-all active:scale-95 flex gap-2">
             View All
             <ArrowRight className="size-4 transition-transform group-hover/btn:translate-x-1" />
